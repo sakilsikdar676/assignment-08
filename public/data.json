@@ -1,0 +1,233 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "UV Protection Sunglasses",
+      "brand": "SunShade",
+      "price": 15,
+      "rating": 4.7,
+      "stock": 10,
+      "description": "Premium UV400 protection sunglasses that reduce glare and protect your eyes during bright summer days.",
+      "image": "https://images.pexels.com/photos/27783029/pexels-photo-27783029.jpeg",
+      "category": "Accessories"
+    },
+    {
+      "id": 2,
+      "name": "Ocean Blue Swimwear",
+      "brand": "AquaFit",
+      "price": 25,
+      "rating": 4.5,
+      "stock": 15,
+      "description": "High-quality, quick-dry fabric swimwear designed for maximum comfort in the pool or at the beach.",
+      "image": "https://images.pexels.com/photos/5405653/pexels-photo-5405653.jpeg",
+      "category": "Apparel"
+    },
+    {
+      "id": 3,
+      "name": "Sunscreen SPF 50+",
+      "brand": "GlowGuard",
+      "price": 12,
+      "rating": 4.8,
+      "stock": 50,
+      "description": "Broad-spectrum SPF 50+ sunscreen that provides long-lasting protection without leaving a greasy residue.",
+      "image": "https://images.pexels.com/photos/18225013/pexels-photo-18225013.jpeg",
+      "category": "Skincare"
+    },
+    {
+      "id": 4,
+      "name": "Tropical Beach Towel",
+      "brand": "SandFree",
+      "price": 20,
+      "rating": 4.3,
+      "stock": 25,
+      "description": "An oversized, sand-resistant microfiber towel featuring vibrant tropical prints for your beach trips.",
+      "image": "https://images.pexels.com/photos/37080707/pexels-photo-37080707.jpeg",
+      "category": "Beach Accessories"
+    },
+    {
+      "id": 5,
+      "name": "Wide Brim Straw Hat",
+      "brand": "BeachVibe",
+      "price": 18,
+      "rating": 4.6,
+      "stock": 12,
+      "description": "Hand-woven straw hat with a wide brim to provide excellent face and neck shade under the sun.",
+      "image": "https://images.pexels.com/photos/33479374/pexels-photo-33479374.jpeg",
+      "category": "Accessories"
+    },
+    {
+      "id": 6,
+      "name": "Waterproof Phone Pouch",
+      "brand": "DryCase",
+      "price": 10,
+      "rating": 4.4,
+      "stock": 40,
+      "description": "Universal waterproof case that allows you to use your phone's touchscreen while protecting it from water and sand.",
+      "image": "https://images.pexels.com/photos/24906529/pexels-photo-24906529.jpeg",
+      "category": "Electronics"
+    },
+    {
+      "id": 7,
+      "name": "Classic Flip Flops",
+      "brand": "EasyWalk",
+      "price": 8,
+      "rating": 4.2,
+      "stock": 30,
+      "description": "Durable and lightweight flip flops with a cushioned sole for all-day summer comfort.",
+      "image": "https://images.pexels.com/photos/27783031/pexels-photo-27783031.jpeg",
+      "category": "Footwear"
+    },
+    {
+      "id": 8,
+      "name": "Aloe Vera Cooling Gel",
+      "brand": "CoolSkin",
+      "price": 14,
+      "rating": 4.9,
+      "stock": 20,
+      "description": "Pure aloe vera gel that provides instant relief and hydration for sun-exposed or irritated skin.",
+      "image": "https://images.pexels.com/photos/17555298/pexels-photo-17555298.jpeg",
+      "category": "Skincare"
+    },
+    {
+      "id": 9,
+      "name": "Portable Neck Fan",
+      "brand": "BreezeGo",
+      "price": 22,
+      "rating": 4.5,
+      "stock": 18,
+      "description": "A hands-free, USB rechargeable neck fan with three adjustable speeds to keep you cool on the go.",
+      "image": "https://images.pexels.com/photos/8311884/pexels-photo-8311884.jpeg",
+      "category": "Electronics"
+    },
+    {
+      "id": 10,
+      "name": "Insulated Water Bottle",
+      "brand": "HydroChill",
+      "price": 30,
+      "rating": 4.7,
+      "stock": 15,
+      "description": "Double-walled vacuum insulated bottle that keeps your beverages ice-cold for up to 24 hours.",
+      "image": "https://images.pexels.com/photos/10155039/pexels-photo-10155039.jpeg",
+      "category": "Accessories"
+    },
+    {
+      "id": 11,
+      "name": "Floral Summer Dress",
+      "brand": "Bloom",
+      "price": 35,
+      "rating": 4.6,
+      "stock": 8,
+      "description": "A light and breezy floral print dress made from breathable cotton, perfect for summer brunches.",
+      "image": "https://images.pexels.com/photos/7836547/pexels-photo-7836547.jpeg",
+      "category": "Apparel"
+    },
+    {
+      "id": 12,
+      "name": "Pro Beach Volleyball",
+      "brand": "ProSpike",
+      "price": 15,
+      "rating": 4.4,
+      "stock": 22,
+      "description": "Regulation size beach volleyball with a soft-touch cover for better control and durability.",
+      "image": "https://images.pexels.com/photos/37080708/pexels-photo-37080708.jpeg",
+      "category": "Sports"
+    },
+    {
+      "id": 13,
+      "name": "Polarized Aviator Shades",
+      "brand": "SkyEye",
+      "price": 45,
+      "rating": 4.8,
+      "stock": 5,
+      "description": "Timeless aviator style with polarized lenses to eliminate glare and enhance visual clarity.",
+      "image": "https://images.pexels.com/photos/8276905/pexels-photo-8276905.jpeg",
+      "category": "Accessories"
+    },
+    {
+      "id": 14,
+      "name": "Men's Quick-Dry Shorts",
+      "brand": "SurfStyle",
+      "price": 28,
+      "rating": 4.3,
+      "stock": 20,
+      "description": "Performance board shorts featuring 4-way stretch and moisture-wicking technology.",
+      "image": "https://images.pexels.com/photos/27099489/pexels-photo-27099489.jpeg",
+      "category": "Apparel"
+    },
+    {
+      "id": 15,
+      "name": "Flamingo Pool Float",
+      "brand": "Floatie",
+      "price": 40,
+      "rating": 4.7,
+      "stock": 7,
+      "description": "Giant inflatable flamingo float made from thick, tear-resistant vinyl for ultimate pool relaxation.",
+      "image": "https://images.pexels.com/photos/17428160/pexels-photo-17428160.jpeg",
+      "category": "Beach Accessories"
+    },
+    {
+      "id": 16,
+      "name": "Canvas Tote Beach Bag",
+      "brand": "ToteIt",
+      "price": 12,
+      "rating": 4.1,
+      "stock": 35,
+      "description": "Spacious canvas bag with sturdy handles and an inner zipper pocket for all your essentials.",
+      "image": "https://images.pexels.com/photos/5405630/pexels-photo-5405630.jpeg",
+      "category": "Accessories"
+    },
+    {
+      "id": 17,
+      "name": "Cooling Face Mist",
+      "brand": "FreshUp",
+      "price": 9,
+      "rating": 4.5,
+      "stock": 25,
+      "description": "A refreshing mist infused with cucumber and rosewater to cool and revitalize your face.",
+      "image": "https://images.pexels.com/photos/32191793/pexels-photo-32191793.jpeg",
+      "category": "Skincare"
+    },
+    {
+      "id": 18,
+      "name": "Folding Beach Chair",
+      "brand": "RestEasy",
+      "price": 50,
+      "rating": 4.6,
+      "stock": 10,
+      "description": "Lightweight, portable chair with five reclining positions and a built-in cup holder.",
+      "image": "https://images.pexels.com/photos/37080681/pexels-photo-37080681.jpeg",
+      "category": "Furniture"
+    },
+    {
+      "id": 19,
+      "name": "Anti-Fog Snorkel Mask",
+      "brand": "DeepSea",
+      "price": 55,
+      "rating": 4.8,
+      "stock": 6,
+      "description": "Full-face snorkel mask with 180-degree visibility and advanced anti-fog breathing technology.",
+      "image": "https://images.pexels.com/photos/7836547/pexels-photo-7836547.jpeg",
+      "category": "Sports"
+    },
+    {
+      "id": 20,
+      "name": "Lemonade Pitcher Set",
+      "brand": "SummerSip",
+      "price": 24,
+      "rating": 4.4,
+      "stock": 15,
+      "description": "Glass pitcher set with 4 matching tumblers, ideal for serving chilled summer drinks to guests.",
+      "image": "https://images.pexels.com/photos/8155446/pexels-photo-8155446.jpeg",
+      "category": "Home Decor"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
