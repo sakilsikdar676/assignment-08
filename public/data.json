@@ -1,5 +1,4 @@
-{
-  "products": [
+ [
     {
       "id": 1,
       "name": "UV Protection Sunglasses",
@@ -221,7 +220,7 @@
       "category": "Home Decor"
     }
   ]
-}
+
 
 
 
