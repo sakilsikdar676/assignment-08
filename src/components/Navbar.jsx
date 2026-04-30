@@ -38,12 +38,16 @@ const Navbar = () => {
           {/* 3. Desktop Buttons & Mobile Toggle */}
           <div className="flex items-center gap-3">
             <div className="hidden md:flex items-center gap-3">
-              <button className="bg-[#4e31d4] text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">
-                Login
-              </button>
-              <button className="bg-[#e60000] text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">
-                LogOut
-              </button>
+              <Link href="/login">
+                <button className="bg-[#4e31d4] text-white w-full btn rounded-lg font-semibold">
+                  Login
+                </button>
+              </Link>
+              <Link href="/signup">
+                <button className="bg-[#794ebe] text-white w-full btn  rounded-lg font-semibold">
+                  SignUp
+                </button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -65,7 +69,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/all-products" className="hover:text-blue-500 transition">
+              <Link
+                href="/all-products"
+                className="hover:text-blue-500 transition"
+              >
                 All Products
               </Link>
             </li>
@@ -117,12 +124,16 @@ const Navbar = () => {
           </ul>
 
           <div className="flex flex-col gap-3 mt-10">
-            <button className="bg-[#4e31d4] text-white w-full py-3 rounded-lg font-semibold">
-              Login
-            </button>
-            <button className="bg-[#e60000] text-white w-full py-3 rounded-lg font-semibold">
-              LogOut
-            </button>
+            <Link href="/login">
+              <button className="bg-[#4e31d4] text-white w-full py-3 rounded-lg font-semibold">
+                Login
+              </button>
+            </Link>
+            <Link href="/signup">
+              <button className="bg-[#794ebe] text-white w-full py-3 rounded-lg font-semibold">
+                SignUp
+              </button>
+            </Link>
           </div>
         </div>
       </div>
