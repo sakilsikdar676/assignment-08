@@ -1,6 +1,7 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
+import { FaGoogle } from "react-icons/fa6";
 
 const SignUpPage = () => {
   const router = useRouter();
@@ -23,10 +24,23 @@ const SignUpPage = () => {
       console.log("FULL ERROR:", error);
       alert(error.message);
       return;
-    }else{
+    } else {
       router.push("/login");
     }
   };
+
+
+const handleGoogle= async ()=>{
+ await authClient.signIn.social({
+  provider: "google",
+ });
+  
+
+}
+
+
+
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-12">
@@ -107,6 +121,13 @@ const SignUpPage = () => {
               className="w-full flex justify-center py-4 px-4 border border-transparent rounded-2xl shadow-sm text-lg font-bold text-white bg-gray-900 hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-all active:scale-95"
             >
               Create Account
+            </button>
+            <br/>
+            <button
+              onClick={handleGoogle}
+              className="w-full flex justify-center items-center gap-2 btn btn-outline py-4 px-4  rounded-2xl shadow-sm text-sm md:text-lg font-bold"
+            >
+            <FaGoogle />  SignUP With Google
             </button>
           </div>
         </form>

@@ -5,7 +5,7 @@ import { mongodbAdapter } from "better-auth/adapters/mongodb";
 const uri = process.env.MONGODB_URI;
 
 if (!uri) {
-  throw new Error("MONGODB_URI নাই");
+  throw new Error("MONGODB_URI Not Found");
 }
 
 const client = new MongoClient(uri);
@@ -18,5 +18,11 @@ export const auth = betterAuth({
   }),
   emailAndPassword: {
     enabled: true,
+  },
+  socialProviders: {
+    google: {
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    },
   },
 });

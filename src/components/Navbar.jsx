@@ -4,8 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import img from "../../assest/logo.png";
+import { authClient } from "@/lib/auth-client";
 
 const Navbar = () => {
+  const userData = authClient.useSession();
+  const user = userData.data?.user;
+
+  const handleLogout = async () => {
+    await authClient.signOut();
+  };
+
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -37,18 +45,36 @@ const Navbar = () => {
 
           {/* 3. Desktop Buttons & Mobile Toggle */}
           <div className="flex items-center gap-3">
-            <div className="hidden md:flex items-center gap-3">
-              <Link href="/login">
-                <button className="bg-[#4e31d4] text-white w-full btn rounded-lg font-semibold">
-                  Login
-                </button>
-              </Link>
-              <Link href="/signup">
-                <button className="bg-[#794ebe] text-white w-full btn  rounded-lg font-semibold">
-                  SignUp
-                </button>
-              </Link>
-            </div>
+            {!user && (
+              <div className="hidden md:flex items-center gap-3">
+                <Link href="/login">
+                  <button className="bg-[#4e31d4] text-white w-full btn rounded-lg font-semibold">
+                    Login
+                  </button>
+                </Link>
+                <Link href="/signup">
+                  <button className="bg-[#794ebe] text-white w-full btn  rounded-lg font-semibold">
+                    SignUp
+                  </button>
+                </Link>
+              </div>
+            )}
+            {user && (
+              <div className="hidden md:flex items-center gap-3">
+                <Link href="/profile">
+                  <div className="avatar">
+                    <div className="w-11 rounded-full">
+                      <img
+                        src={user.image}
+                        referrerPolicy="no-referrer"
+                        alt="profile image"
+                      />
+                    </div>
+                  </div>
+                </Link>
+                <button className="btn btn-error">Logout</button>
+              </div>
+            )}
 
             {/* Mobile Menu Button */}
             <button
@@ -102,38 +128,40 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/products" onClick={() => setIsOpen(false)}>
-                Products
+              <Link href="/all-products" onClick={() => setIsOpen(false)}>
+                All Products
               </Link>
             </li>
             <li>
-              <Link href="/apparel" onClick={() => setIsOpen(false)}>
-                Apparel
-              </Link>
-            </li>
-            <li>
-              <Link href="/accessories" onClick={() => setIsOpen(false)}>
-                Accessories
-              </Link>
-            </li>
-            <li>
-              <Link href="/help" onClick={() => setIsOpen(false)}>
-                Help
+              <Link href="/profile" onClick={() => setIsOpen(false)}>
+                My Profile
               </Link>
             </li>
           </ul>
 
           <div className="flex flex-col gap-3 mt-10">
-            <Link href="/login">
-              <button className="bg-[#4e31d4] text-white w-full py-3 rounded-lg font-semibold">
-                Login
-              </button>
-            </Link>
-            <Link href="/signup">
-              <button className="bg-[#794ebe] text-white w-full py-3 rounded-lg font-semibold">
-                SignUp
-              </button>
-            </Link>
+            {!user && (
+              <div className="flex flex-col gap-3">
+                <Link href="/login">
+                  <button className="bg-[#f1eded] text-black w-full py-3 rounded-lg font-semibold">
+                    Login
+                  </button>
+                </Link>
+
+                <Link href="/signup">
+                  <button className="bg-[#231e2b] text-white w-full py-3 rounded-lg font-semibold">
+                    SignUp
+                  </button>
+                </Link>
+              </div>
+            )}
+            {user && (
+              <div className="flex flex-col gap-3 mt-10">
+                <button onClick={handleLogout} className="btn btn-error">
+                  Logout
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
