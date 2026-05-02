@@ -32,15 +32,33 @@ const Navbar = () => {
           </div>
 
           {/* 2. Search Bar (Hidden on very small screens, or full width on md) */}
-          <div className="hidden sm:flex flex-1 max-w-2xl items-center relative">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full bg-[#f5f7fa] py-2.5 px-6 rounded-full outline-none border border-transparent focus:border-blue-400 focus:bg-white transition-all"
-            />
-            <button className="bg-[#2b85ff] text-white p-3 rounded-full absolute right-0 hover:bg-blue-600 transition">
-              <FiSearch size={20} />
-            </button>
+          
+
+          <div className="hidden md:flex justify-center pb-4">
+            <ul className="flex items-center gap-10 text-gray-800 font-medium">
+              <li>
+                <Link href="/" className="hover:text-blue-500 transition">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/all-products"
+                  className="hover:text-blue-500 transition"
+                >
+                  All Products
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/profile"
+                  className="hover:text-blue-500 transition"
+                >
+                  My Profile
+                </Link>
+              </li>
+            </ul>
           </div>
 
           {/* 3. Desktop Buttons & Mobile Toggle */}
@@ -72,22 +90,22 @@ const Navbar = () => {
                     </div>
                   </div>
                 </Link>
-                <button className="btn btn-error">Logout</button>
+                <button onClick={handleLogout} className="btn btn-error">Logout</button>
               </div>
             )}
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
-            >
-              {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
-            </button>
           </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
+          >
+            {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+          </button>
         </div>
+      </div>
 
-        {/* 4. Desktop Navigation Links (Centered) */}
-        <div className="hidden md:flex justify-center pb-4">
+      {/* 4. Desktop Navigation Links (Centered) */}
+      {/* <div className="hidden md:flex justify-center pb-4">
           <ul className="flex items-center gap-10 text-gray-800 font-medium">
             <li>
               <Link href="/" className="hover:text-blue-500 transition">
@@ -104,13 +122,13 @@ const Navbar = () => {
             </li>
 
             <li>
-              <Link href="/help" className="hover:text-blue-500 transition">
-                Help
+              <Link href="/profile" className="hover:text-blue-500 transition">
+                My Profile
               </Link>
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
 
       {/* 5. Mobile Side Menu */}
       <div
