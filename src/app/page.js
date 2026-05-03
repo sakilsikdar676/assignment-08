@@ -1,5 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import HomePage from "@/components/HomePage";
+import SummerCare from "@/components/SummerCare";
+import TopBrands from "@/components/TopBrands";
 
 
 export default function Home() {
@@ -7,6 +9,8 @@ export default function Home() {
     <div>
       <HeroSection />
       <HomePage />
+      <SummerCare />
+      <TopBrands />
     </div>
   );
 }
