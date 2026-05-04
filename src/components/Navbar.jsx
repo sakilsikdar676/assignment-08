@@ -31,9 +31,6 @@ const Navbar = () => {
             <span className="text-2xl font-bold text-[#001529]">SunCart</span>
           </div>
 
-          {/* 2. Search Bar (Hidden on very small screens, or full width on md) */}
-          
-
           <div className="hidden md:flex justify-center pb-4">
             <ul className="flex items-center gap-10 text-gray-800 font-medium">
               <li>
@@ -90,17 +87,52 @@ const Navbar = () => {
                     </div>
                   </div>
                 </Link>
-                <button onClick={handleLogout} className="btn btn-error">Logout</button>
+                <button onClick={handleLogout} className="btn btn-error">
+                  Logout
+                </button>
               </div>
             )}
           </div>
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
-          >
-            {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
-          </button>
+          <div className="flex">
+            {!user && (
+              <div className="hidden">
+                <Link href="/profile">
+                  <div className="avatar">
+                    <div className="w-11 rounded-full">
+                      <img
+                        src={user?.image}
+                        referrerPolicy="no-referrer"
+                        alt="profile image"
+                      />
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            )}
+            {user && (
+              <div>
+                <Link href="/profile">
+                  <div className="avatar">
+                    <div className="w-11 rounded-full">
+                      <img
+                        src={user?.image}
+                        referrerPolicy="no-referrer"
+                        alt="profile image"
+                      />
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            )}
+
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
+            >
+              {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+            </button>
+          </div>
         </div>
       </div>
 
