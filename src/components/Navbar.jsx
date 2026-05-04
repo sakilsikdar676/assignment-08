@@ -111,7 +111,7 @@ const Navbar = () => {
               </div>
             )}
             {user && (
-              <div>
+              <div className=" flex md:hidden">
                 <Link href="/profile">
                   <div className="avatar">
                     <div className="w-11 rounded-full">
